@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import Footer from "./components/Footer";
 import Login from "./components/Login/Login";
+import MessageBox from "./components/MessageBox";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
 
 import Company from "./components/Company";
@@ -41,6 +42,7 @@ class App extends Component {
         <Route path="/login" component={Login} exact/>
         <Route path="/new" component={NewRoute} />
         <Route path="/page" component={MainPage} />
+        <Route path="/messagebox" component={MessageBox} />
         <Route path="/company" component={Company} />
         <Route component={Error}/>
       </Switch>

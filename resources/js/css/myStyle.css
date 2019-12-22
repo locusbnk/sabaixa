@@ -1,0 +1,211 @@
+.msgboxContainer {
+  width: 280px;
+  height: 350px;
+  display: flex;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(191, 191, 191, 0.8);
+  flex-direction: column; }
+  .msgboxContainer .msgboxTitle {
+    height: auto;
+    min-height: 50px;
+    flex-shrink: none;
+    border-bottom: 1px solid #bfbfbf;
+    box-shadow: 0px 1px 2px rgba(191, 191, 191, 0.8);
+    display: flex; }
+    .msgboxContainer .msgboxTitle .userpic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #bfbfbf;
+      margin: 5px 5px 5px 10px; }
+    .msgboxContainer .msgboxTitle .UserdetailContainer {
+      display: flex;
+      flex-direction: column;
+      align-self: center; }
+      .msgboxContainer .msgboxTitle .UserdetailContainer .userName {
+        color: black; }
+      .msgboxContainer .msgboxTitle .UserdetailContainer .userActivityStatus {
+        color: #bfbfbf; }
+    .msgboxContainer .msgboxTitle .settings {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #bfbfbf;
+      margin: 10px;
+      margin-right: 10px;
+      margin-left: auto; }
+  .msgboxContainer .msgboxBody {
+    padding: 0px 5px 0px 5px;
+    flex: 1;
+    display: flex;
+    margin-bottom: 5px;
+    overflow-y: scroll; }
+    .msgboxContainer .msgboxBody .singleMessageScroller {
+      height: 100%;
+      width: 100%;
+      display: flex; }
+      .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer {
+        height: auto;
+        width: 100%;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column-reverse; }
+        .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .singleMessage {
+          width: 100%;
+          min-height: 40px;
+          flex-shrink: none;
+          height: auto;
+          align-self: center;
+          align-items: flex-end;
+          margin: 15px 0px 15px 0px; }
+          .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .singleMessage .actualmessage {
+            width: auto;
+            min-width: 30px;
+            min-height: 30px;
+            max-width: 80%;
+            padding: 5px 5px 0px 5px;
+            line-height: 120%;
+            overflow-wrap: break-word;
+            box-shadow: 2px 1px 1px rgba(191, 191, 191, 0.8); }
+          .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .singleMessage .userpic {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin: 0px 5px 0px 5px;
+            border: 1px solid #bfbfbf;
+            box-shadow: 2px 1px 1px rgba(191, 191, 191, 0.8);
+            flex-shrink: 0; }
+        .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .anotheruser {
+          display: flex;
+          align-items: left;
+          flex-direction: reverse; }
+          .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .anotheruser .actualmessage {
+            text-align: left;
+            border: 1px solid #bfbfbf;
+            border-radius: 15px 15px 15px 0px;
+            position: relative; }
+        .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .currentuser {
+          display: flex;
+          align-items: right;
+          flex-direction: row-reverse; }
+          .msgboxContainer .msgboxBody .singleMessageScroller .singleMessageContainer .currentuser .actualmessage {
+            text-align: right;
+            border: 1px solid #bfbfbf;
+            border-radius: 15px 15px 0px 15px; }
+  .msgboxContainer .msgboxInputcontainer {
+    min-height: 50px;
+    height: auto;
+    flex-shrink: none;
+    border-top: 1px solid #bfbfbf;
+    display: flex;
+    flex-direction: row; }
+    .msgboxContainer .msgboxInputcontainer .textInput {
+      border: 0;
+      height: 50px;
+      padding: 0px 6px 0px 6px;
+      outline: none;
+      flex: 1; }
+    .msgboxContainer .msgboxInputcontainer .inputsContainer {
+      height: 40px;
+      align-items: center;
+      padding: 3px;
+      display: flex; }
+      .msgboxContainer .msgboxInputcontainer .inputsContainer .imageInput, .msgboxContainer .msgboxInputcontainer .inputsContainer .voiceInput, .msgboxContainer .msgboxInputcontainer .inputsContainer .fileInput {
+        height: 25px;
+        margin: 2px;
+        width: 25px;
+        border-radius: 3px;
+        background: rgba(191, 191, 191, 0.8);
+        overflow: hidden;
+        position: relative; }
+        .msgboxContainer .msgboxInputcontainer .inputsContainer .imageInput:hover, .msgboxContainer .msgboxInputcontainer .inputsContainer .voiceInput:hover, .msgboxContainer .msgboxInputcontainer .inputsContainer .fileInput:hover {
+          background-color: #bfbfbf; }
+        .msgboxContainer .msgboxInputcontainer .inputsContainer .imageInput input, .msgboxContainer .msgboxInputcontainer .inputsContainer .voiceInput input, .msgboxContainer .msgboxInputcontainer .inputsContainer .fileInput input {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 500px;
+          font-size: 70;
+          z-index: 100; }
+
+.typing {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: auto; }
+  .typing .first, .typing .second, .typing .third {
+    align-self: flex-end;
+    height: 10px;
+    width: 10px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #bfbfbf;
+    transform: translateY(13px); }
+  .typing .first {
+    animation: typinganim 1.5s infinite;
+    animation-delay: 0s; }
+  .typing .second {
+    animation: typinganim 1.5s infinite;
+    animation-delay: 0.15s; }
+  .typing .third {
+    animation: typinganim 1.5s infinite;
+    animation-delay: 0.3s; }
+
+@keyframes typinganim {
+  0% {
+    transform: translateY(13px); }
+  70% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(13px); } }
+.messagesPeekContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgba(191, 191, 191, 0.2);
+  border: 1px solid #bfbfbf; }
+  .messagesPeekContainer .activityStatusAndOptions {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .messagesPeekContainer .activityStatusAndOptions .activityStatus {
+      color: #bfbfbf;
+      padding: 2px 8px; }
+    .messagesPeekContainer .activityStatusAndOptions .options {
+      color: #bfbfbf;
+      padding: 2px 8px; }
+  .messagesPeekContainer .singleMessagTag {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    height: 50px; }
+    .messagesPeekContainer .singleMessagTag:hover {
+      background-color: rgba(191, 191, 191, 0.4); }
+    .messagesPeekContainer .singleMessagTag .UserImage {
+      height: 38px;
+      width: 38px;
+      border-radius: 50%;
+      margin: 5px;
+      border: 1px solid #bfbfbf; }
+    .messagesPeekContainer .singleMessagTag .Usernameandmessage {
+      flex: 1;
+      align-self: center; }
+      .messagesPeekContainer .singleMessagTag .Usernameandmessage .Usernameanddetail {
+        display: flex; }
+        .messagesPeekContainer .singleMessagTag .Usernameandmessage .Usernameanddetail .Username {
+          color: black; }
+        .messagesPeekContainer .singleMessagTag .Usernameandmessage .Usernameanddetail .newMessageTag {
+          font-size: 12px;
+          height: 16px;
+          margin-left: 12px;
+          padding: 2px;
+          width: auto;
+          background-color: #dafc1a; }
+      .messagesPeekContainer .singleMessagTag .Usernameandmessage .LatestMessagedata {
+        color: #bfbfbf; }
+
+/*# sourceMappingURL=style.css.map */

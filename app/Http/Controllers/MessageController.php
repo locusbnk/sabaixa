@@ -126,11 +126,11 @@ class MessageController extends Controller
             return new Response('Not Found', 404);
         if($request['messageType']<=0&$request['messageType']>=6)
             return new Response('Bad Request',400);
-        $sender=Auth::user()-id;
+        $sender=Auth::user()->id;
         $receiver=$request['receiver'];
         if(!Schema::hasTable($sender.":".$receiver)){
             $sender=$request['receiver'];
-            $receiver=Auth::user()-id;
+            $receiver=Auth::user()->id;
         }
         switch($request['messageType']){
             case 1:
